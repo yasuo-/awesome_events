@@ -13,7 +13,12 @@
       <h1><a href="/">AwesomeEvents</a></h1>
       <nav>
         <ul>
-          <li><%= link_to 'Twiiter Login', '/auth/twitter' %></li>
+          <li><%= link_to 'イベントを作成する', new_event_path %></li>
+          <% if logged_in? %>
+            <li><%= link_to 'Logout', logout_path %></li>
+          <% else %>
+            <li><%= link_to 'Twiiter Login', '/auth/twitter' %></li>
+          <% end %>
         </ul>
       </nav>
     </header>
