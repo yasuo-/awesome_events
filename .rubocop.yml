@@ -1,0 +1,25 @@
+require:
+  - rubocop-airbnb
+
+inherit_from:
+  - .rubocop_todo.yml
+
+# 追記
+Rails:
+  Enabled: true
+AllCops:
+  TargetRubyVersion: 2.4.1
+  DisplayStyleGuide: true
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'vendor/**/*'
+    - 'lib/tasks/_force_reload.rake'
+
+# ブロック内の行数
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'

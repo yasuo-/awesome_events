@@ -33,6 +33,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'omniauth'
+gem 'omniauth-openid'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-instagram'
+gem 'omniauth-github'
+
+gem 'omniauth-oauth2', require: false
+
+gem 'omniauth-google-oauth2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -42,7 +53,9 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'rubocop', require: false
+  gem 'rubocop-airbnb'
   gem 'rails-erd'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -57,6 +70,7 @@ group :development do
   gem 'pry-rails'
   gem 'bullet', require: !!ENV['BULLET']
   gem 'better_errors'
+  gem 'brakeman', :require => false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
