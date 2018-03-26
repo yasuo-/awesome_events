@@ -41,6 +41,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'rubocop', require: false
+  gem 'rails-erd'
 end
 
 group :development do
@@ -53,6 +55,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'bullet'
   gem 'pry-rails'
+  gem 'bullet', require: !!ENV['BULLET']
+  gem 'better_errors'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
