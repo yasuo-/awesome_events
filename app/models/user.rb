@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  # create_eventsに関して言うなら，
+  # あるuserのid値が，Eventのowner_idカラムの値と一致するレコードを取り出します．
   has_many :create_events, class_name: 'Event', foreign_key: :owner_id
 
   def self.find_or_create_from_auth_hash(auth_hash)
