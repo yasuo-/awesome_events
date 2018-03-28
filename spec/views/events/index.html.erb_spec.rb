@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe "events/index", type: :view do
   before(:each) do
     assign(:events, [
-      Event.create!(),
-      Event.create!()
+      Event.create!,
+      Event.create!,
     ])
   end
 

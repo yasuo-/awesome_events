@@ -18,6 +18,8 @@ AllCops:
     - 'log/**/*'
     - 'vendor/**/*'
     - 'lib/tasks/_force_reload.rake'
+    - 'bin/**/*'
+    - 'spec/controllers/*'
 
 # ブロック内の行数
 Metrics/BlockLength:
