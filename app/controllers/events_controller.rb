@@ -20,6 +20,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+    @event = current_user.created_events.find(params[:id])
   end
 
   # POST /events
@@ -43,7 +44,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: '更新しました.' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -55,9 +56,10 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    @event = current_user.created_events.find(params[:id])
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to events_url, notice: '削除しました.' }
       format.json { head :no_content }
     end
   end
