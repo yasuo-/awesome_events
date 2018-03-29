@@ -1,0 +1,7 @@
+linter:
+  rubocop:
+    gems:
+      - rubocop-airbnb
+    options:
+      config: '.rubocop.yml'
+      rails: true
