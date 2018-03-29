@@ -6,9 +6,9 @@ class TicketsController < ApplicationController
   end
 
   def create
-    ticket = current_user.tickets.build do |ticket|
-      ticket.event_id = params[:event_id]
-      ticket.comment = params[:ticket][:comment]
+    ticket = current_user.tickets.build do |t|
+      t.event_id = params[:event_id]
+      t.comment = params[:ticket][:comment]
     end
 
     if ticket.save
