@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# error 通知
+gem 'exception_notification'
+gem 'slack-notifier'
+
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'omniauth-facebook'
