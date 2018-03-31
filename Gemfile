@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'exception_notification'
 gem 'slack-notifier'
 
+# paginator
+gem 'kaminari'
+
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'omniauth-facebook'
